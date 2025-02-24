@@ -1,0 +1,21 @@
+{
+    "123456": {
+        "pin": "1234",
+        "balance": 5100,
+        "attempts": 0,
+        "locked": false,
+        "history": [
+            "2025-02-23 16:56:57.425529 - Deposited \u20b9200",
+            "2025-02-23 16:57:02.500759 - Withdrawn \u20b9200",
+            "2025-02-23 17:12:35.574154 - Deposited \u20b9200",
+            "2025-02-23 17:12:42.849349 - Withdrawn \u20b9100"
+        ]
+    },
+    "987654": {
+        "pin": "5678",
+        "balance": 3000,
+        "attempts": 0,
+        "locked": false,
+        "history": []
+    }
+}

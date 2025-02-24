@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Welcome to Your Dashboard</h2>
+        <p><strong>Balance:</strong> {{ balance }}</p>
+        
+        {% if error %}
+            <p class="error">{{ error }}</p>
+        {% endif %}
+        
+        <form action="/deposit" method="post">
+            <label>Deposit Amount:</label>
+            <input type="number" name="amount" required>
+            <button type="submit">Deposit</button>
+        </form>
+        
+        <form action="/withdraw" method="post">
+            <label>Withdraw Amount:</label>
+            <input type="number" name="amount" required>
+            <button type="submit">Withdraw</button>
+        </form>
+        
+        <a href="{{ url_for('change_pin') }}">Change PIN</a>
+        <a href="{{ url_for('logout') }}">Logout</a>
+        
+        <h3>Transaction History</h3>
+        <div class="transaction-history">
+            {% if history %}
+                <ul>
+                    {% for entry in history %}
+                        <li>{{ entry }}</li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p>No transactions yet.</p>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
