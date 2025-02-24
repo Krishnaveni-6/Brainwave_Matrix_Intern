@@ -29,25 +29,19 @@ atm_web_project/
 
 ## Installation & Setup
 
-### 1. Clone the Repository
-```
-git clone https://github.com/your-repo/atm-web-project.git
-cd atm-web-project
-```
-
-### 2. Install Dependencies
+### 1. Install Dependencies
 Ensure you have Python installed (Python 3.8 or later recommended). Then install required packages:
 ```
 pip install -r requirements.txt
 ```
 
-### 3. Run the Application
+### 2. Run the Application
 ```
 python app.py
 ```
 The application will start on `http://127.0.0.1:5000/`
 
-### 4. Open in Browser
+### 3. Open in Browser
 Go to `http://127.0.0.1:5000/` in your web browser to access the login page.
 
 ## Usage
